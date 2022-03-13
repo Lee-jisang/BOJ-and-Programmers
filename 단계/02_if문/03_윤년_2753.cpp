@@ -1,18 +1,15 @@
 #include <iostream>
 using namespace std;
 
-int main() {
-    int a;
-    cin >> a;
-    if (90 <= a && a <= 100) //Á¶°Ç and ¿¬»êÀÚ ºÙ¿©¶óÀ×
-        cout << "A";
-    else if (80 <= a && a <= 89)
-        cout << "B";
-    else if (70 <= a && a <= 79)
-        cout << "C";
-    else if (60 <= a && a <= 69)
-        cout << "D";
-    else
-        cout << "F";
-
+int main(){
+    int year;
+    cin >> year;
+    if(year % 4 == 0)
+        if(year % 100 != 0) || (year % 400 == 0)
+            cout << 1; 
+        else
+            cout << 0;
+    else //ê¼­ ifë¬¸ elseë‘ ì§ì„ ì§€ì–´ì£¼ì
+        cout << 0;
+    return 0;
 }
