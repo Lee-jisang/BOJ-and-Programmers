@@ -22,9 +22,9 @@ using namespace std;
 int main(){
     int a, b, c;
     cin >> a >> b >> c;
-    int max;
+    int max; //가장 큰 수의 눈
     
-    if(a>b)
+    if(a>b) //세개의 수 -> 큰수 찾기
         if(a>c)
             max=a;
         else
