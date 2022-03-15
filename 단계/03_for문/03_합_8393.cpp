@@ -1,20 +1,24 @@
 /*
-¹®Á¦:ÁØÇÏ´Â »çÀÌÆ®¿¡ È¸¿ø°¡ÀÔÀ» ÇÏ´Ù°¡ joonas¶ó´Â ¾ÆÀÌµð°¡ ÀÌ¹Ì Á¸ÀçÇÏ´Â °ÍÀ» º¸°í ³î¶ú´Ù. ÁØÇÏ´Â ³î¶÷À» ??!·Î Ç¥ÇöÇÑ´Ù. ÁØÇÏ°¡ °¡ÀÔÇÏ·Á°í ÇÏ´Â »çÀÌÆ®¿¡ ÀÌ¹Ì Á¸ÀçÇÏ´Â ¾ÆÀÌµð°¡ ÁÖ¾îÁ³À» ¶§, ³î¶÷À» Ç¥ÇöÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ½Ã¿À.
+ë¬¸ì œ
+nì´ ì£¼ì–´ì¡Œì„ ë•Œ, 1ë¶€í„° nê¹Œì§€ í•©ì„ êµ¬í•˜ëŠ” í”„ë¡œê·¸ëž¨ì„ ìž‘ì„±í•˜ì‹œì˜¤.
 
-ÀÔ·Â:Ã¹Â° ÁÙ¿¡ ÁØÇÏ°¡ °¡ÀÔÇÏ·Á°í ÇÏ´Â »çÀÌÆ®¿¡ ÀÌ¹Ì Á¸ÀçÇÏ´Â ¾ÆÀÌµð°¡ ÁÖ¾îÁø´Ù. ¾ÆÀÌµð´Â ¾ËÆÄºª ¼Ò¹®ÀÚ·Î¸¸ ÀÌ·ç¾îÁ® ÀÖÀ¸¸ç, ±æÀÌ´Â 50ÀÚ¸¦ ³ÑÁö ¾Ê´Â´Ù.
+ìž…ë ¥
+ì²«ì§¸ ì¤„ì— n (1 â‰¤ n â‰¤ 10,000)ì´ ì£¼ì–´ì§„ë‹¤.
 
-Ãâ·Â:Ã¹Â° ÁÙ¿¡ ÁØÇÏÀÇ ³î¶÷À» Ãâ·ÂÇÑ´Ù. ³î¶÷Àº ¾ÆÀÌµð µÚ¿¡ ??!¸¦ ºÙ¿©¼­ ³ªÅ¸³½´Ù.
+ì¶œë ¥
+1ë¶€í„° nê¹Œì§€ í•©ì„ ì¶œë ¥í•œë‹¤.
 */
 
-//°Á ¹®ÀÚ¿­ ÀÔ·Â ¹Þ°í, µÚ¿¡ ??! ºÙÀÌ´Â ¹®Á¦
 #include <iostream>
-#include <string> //¹®ÀÚ¿­ ÀÔ·Â Çì´õÆÄÀÏ
 using namespace std;
 
-int main() {
-	string s1;
-	cin >> s1;
-	cout << s1 << "??!" << endl;
-
-	return 0;
+int main(){
+    int n;
+    cin >> n;
+    
+    int sum=0;
+    for(int i=1; i<=n; i++)
+        sum= sum+i;
+    
+    cout << sum;   
 }
