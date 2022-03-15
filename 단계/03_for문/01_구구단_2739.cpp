@@ -1,20 +1,21 @@
 /*
-¹®Á¦:ÁØÇÏ´Â »çÀÌÆ®¿¡ È¸¿ø°¡ÀÔÀ» ÇÏ´Ù°¡ joonas¶ó´Â ¾ÆÀÌµð°¡ ÀÌ¹Ì Á¸ÀçÇÏ´Â °ÍÀ» º¸°í ³î¶ú´Ù. ÁØÇÏ´Â ³î¶÷À» ??!·Î Ç¥ÇöÇÑ´Ù. ÁØÇÏ°¡ °¡ÀÔÇÏ·Á°í ÇÏ´Â »çÀÌÆ®¿¡ ÀÌ¹Ì Á¸ÀçÇÏ´Â ¾ÆÀÌµð°¡ ÁÖ¾îÁ³À» ¶§, ³î¶÷À» Ç¥ÇöÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ½Ã¿À.
+ë¬¸ì œ
+Nì„ ìž…ë ¥ë°›ì€ ë’¤, êµ¬êµ¬ë‹¨ Në‹¨ì„ ì¶œë ¥í•˜ëŠ” í”„ë¡œê·¸ëž¨ì„ ìž‘ì„±í•˜ì‹œì˜¤. ì¶œë ¥ í˜•ì‹ì— ë§žì¶°ì„œ ì¶œë ¥í•˜ë©´ ëœë‹¤.
 
-ÀÔ·Â:Ã¹Â° ÁÙ¿¡ ÁØÇÏ°¡ °¡ÀÔÇÏ·Á°í ÇÏ´Â »çÀÌÆ®¿¡ ÀÌ¹Ì Á¸ÀçÇÏ´Â ¾ÆÀÌµð°¡ ÁÖ¾îÁø´Ù. ¾ÆÀÌµð´Â ¾ËÆÄºª ¼Ò¹®ÀÚ·Î¸¸ ÀÌ·ç¾îÁ® ÀÖÀ¸¸ç, ±æÀÌ´Â 50ÀÚ¸¦ ³ÑÁö ¾Ê´Â´Ù.
+ìž…ë ¥
+ì²«ì§¸ ì¤„ì— Nì´ ì£¼ì–´ì§„ë‹¤. Nì€ 1ë³´ë‹¤ í¬ê±°ë‚˜ ê°™ê³ , 9ë³´ë‹¤ ìž‘ê±°ë‚˜ ê°™ë‹¤.
 
-Ãâ·Â:Ã¹Â° ÁÙ¿¡ ÁØÇÏÀÇ ³î¶÷À» Ãâ·ÂÇÑ´Ù. ³î¶÷Àº ¾ÆÀÌµð µÚ¿¡ ??!¸¦ ºÙ¿©¼­ ³ªÅ¸³½´Ù.
+ì¶œë ¥
+ì¶œë ¥í˜•ì‹ê³¼ ê°™ê²Œ N*1ë¶€í„° N*9ê¹Œì§€ ì¶œë ¥í•œë‹¤.
 */
 
-//°Á ¹®ÀÚ¿­ ÀÔ·Â ¹Þ°í, µÚ¿¡ ??! ºÙÀÌ´Â ¹®Á¦
 #include <iostream>
-#include <string> //¹®ÀÚ¿­ ÀÔ·Â Çì´õÆÄÀÏ
 using namespace std;
 
-int main() {
-	string s1;
-	cin >> s1;
-	cout << s1 << "??!" << endl;
-
-	return 0;
+int main(){
+    int num;
+    cin >> num;
+    
+    for(int i=1; i<10; i++)
+        cout << num << " * " << i << " = " << num*i << endl; 
 }
