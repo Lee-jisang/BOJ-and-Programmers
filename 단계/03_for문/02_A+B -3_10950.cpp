@@ -1,20 +1,49 @@
 /*
-¹®Á¦:ÁØÇÏ´Â »çÀÌÆ®¿¡ È¸¿ø°¡ÀÔÀ» ÇÏ´Ù°¡ joonas¶ó´Â ¾ÆÀÌµð°¡ ÀÌ¹Ì Á¸ÀçÇÏ´Â °ÍÀ» º¸°í ³î¶ú´Ù. ÁØÇÏ´Â ³î¶÷À» ??!·Î Ç¥ÇöÇÑ´Ù. ÁØÇÏ°¡ °¡ÀÔÇÏ·Á°í ÇÏ´Â »çÀÌÆ®¿¡ ÀÌ¹Ì Á¸ÀçÇÏ´Â ¾ÆÀÌµð°¡ ÁÖ¾îÁ³À» ¶§, ³î¶÷À» Ç¥ÇöÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ½Ã¿À.
+ë¬¸ì œ
+ë‘ ì •ìˆ˜ Aì™€ Bë¥¼ ìž…ë ¥ë°›ì€ ë‹¤ìŒ, A+Bë¥¼ ì¶œë ¥í•˜ëŠ” í”„ë¡œê·¸ëž¨ì„ ìž‘ì„±í•˜ì‹œì˜¤.
 
-ÀÔ·Â:Ã¹Â° ÁÙ¿¡ ÁØÇÏ°¡ °¡ÀÔÇÏ·Á°í ÇÏ´Â »çÀÌÆ®¿¡ ÀÌ¹Ì Á¸ÀçÇÏ´Â ¾ÆÀÌµð°¡ ÁÖ¾îÁø´Ù. ¾ÆÀÌµð´Â ¾ËÆÄºª ¼Ò¹®ÀÚ·Î¸¸ ÀÌ·ç¾îÁ® ÀÖÀ¸¸ç, ±æÀÌ´Â 50ÀÚ¸¦ ³ÑÁö ¾Ê´Â´Ù.
+ìž…ë ¥
+ì²«ì§¸ ì¤„ì— í…ŒìŠ¤íŠ¸ ì¼€ì´ìŠ¤ì˜ ê°œìˆ˜ Tê°€ ì£¼ì–´ì§„ë‹¤.
 
-Ãâ·Â:Ã¹Â° ÁÙ¿¡ ÁØÇÏÀÇ ³î¶÷À» Ãâ·ÂÇÑ´Ù. ³î¶÷Àº ¾ÆÀÌµð µÚ¿¡ ??!¸¦ ºÙ¿©¼­ ³ªÅ¸³½´Ù.
+ê° í…ŒìŠ¤íŠ¸ ì¼€ì´ìŠ¤ëŠ” í•œ ì¤„ë¡œ ì´ë£¨ì–´ì ¸ ìžˆìœ¼ë©°, ê° ì¤„ì— Aì™€ Bê°€ ì£¼ì–´ì§„ë‹¤. (0 < A, B < 10)
+
+ì¶œë ¥
+ê° í…ŒìŠ¤íŠ¸ ì¼€ì´ìŠ¤ë§ˆë‹¤ A+Bë¥¼ ì¶œë ¥í•œë‹¤.
 */
 
-//°Á ¹®ÀÚ¿­ ÀÔ·Â ¹Þ°í, µÚ¿¡ ??! ºÙÀÌ´Â ¹®Á¦
+//ë°°ì—´ë¡œ í’€ë©´ ëŸ°íƒ€ìž„ì—ëŸ¬ ë‚˜ì˜´ ì½”ë“œëŒë ¤ë³´ë©´ ìž˜ ë‚˜ì˜¤ê¸´í•¨, 
+//ê·¸ë¦¬ê³  í•œë²ˆì— ìž…ë ¥ë°›ì€ë‹¤ìŒ í•œë²ˆì— ì¶œë ¥í•˜ëŠ” ì¤„ì•Œì•˜ë”ë‹ˆ í•œë²ˆìž…ë ¥í•˜ê³  ë°”ë¡œ ì¶œë ¥ë˜ê²Œí•´ë„ ìƒê´€ì—†ë‹¤í•¨
 #include <iostream>
-#include <string> //¹®ÀÚ¿­ ÀÔ·Â Çì´õÆÄÀÏ
 using namespace std;
 
-int main() {
-	string s1;
-	cin >> s1;
-	cout << s1 << "??!" << endl;
+int main(){
+    int T;
+    cin >> T;
+      
+    int a[10]={0,};
+    int b[10]={0,};
+    
+    for(int i=0; i<T; i++)
+        cin >> a[i] >> b[i];       
+    
+    for(int i=0; i<T; i++)
+        cout << a[i]+b[i] << endl;
+  
+}
 
-	return 0;
+
+//ê·¸ëŸ¼ ë°°ì—´ ì‚¬ìš©í•  í•„ìš” ì—†ì§€...
+#include <iostream>
+using namespace std;
+
+int main(){
+    int T;
+    cin >> T;
+      
+    int a, b;
+    
+    for(int i=0; i<T; i++){
+        cin >> a >> b;       
+        cout << a+b << endl;      
+    } 
 }
