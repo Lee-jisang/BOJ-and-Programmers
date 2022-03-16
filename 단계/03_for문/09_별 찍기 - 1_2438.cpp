@@ -12,7 +12,7 @@
 //이중 반복문
 #include <iostream>
 using namespace std;
-
+ 
 int main(){
     int N;
     cin >> N;
