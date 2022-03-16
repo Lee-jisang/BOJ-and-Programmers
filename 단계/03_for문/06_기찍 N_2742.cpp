@@ -8,7 +8,7 @@
 출력
 첫째 줄부터 N번째 줄 까지 차례대로 출력한다.
 */
-
+ 
 
 #include <iostream>
 using namespace std;
@@ -18,6 +18,5 @@ int main(){
     cin >> N;
     
     for(int i=N; i>0; i--)
-        cout << i << '\n';
-     
+        cout << i << '\n';   
 }
