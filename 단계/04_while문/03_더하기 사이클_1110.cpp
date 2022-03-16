@@ -21,24 +21,25 @@ int main() {
 
     int temp;
     temp = N;
-    int k; //새로운수
+    
+    int k; //덧셈 결과
     int cnt = 0;
 
     //cout << "처음 수:" << N << endl;
 
     while (1) {
-        k = (N / 10) + (N % 10); //십의 자리 + 일의 자리 -> 새로운 수
+        k = (N / 10) + (N % 10); //십의 자리 + 일의 자리 -> 덧셈 결과
         //cout << "덧셈 결과:" << k << endl;
-        if (k < 10) {
-            N = (N % 10) * 10 + k;    //  새로운수
+        if (k < 10) { //덧셈결과가 10보다 작으면
+            N = (N % 10) * 10 + k;    //  N은 새로운수
             cnt++;
-            if (temp == N) break;
+            if (temp == N) break; //N이 처음입력한 N이랑 같을때
         }
-        else { 
+        else {  //그 반대
             N = (N % 10) * 10 + k % 10;
             cnt++;
             if (temp == N) break;
         }
     }
-    cout << cnt << "\n";
+    cout << cnt << "\n"; //더하기 사이클 출력
 }
