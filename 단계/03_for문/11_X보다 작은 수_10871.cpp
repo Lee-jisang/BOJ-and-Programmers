@@ -14,7 +14,7 @@ X보다 작은 수를 입력받은 순서대로 공백으로 구분해 출력한
 #include <iostream>
 using namespace std;
 
-int main(){
+int main(){ 
     int N, X; //N: 정수의 개수, X: 정수 X
     cin >> N >> X;
     
