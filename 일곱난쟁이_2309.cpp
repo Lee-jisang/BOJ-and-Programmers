@@ -10,7 +10,7 @@
 
 #include<iostream>
 #include<algorithm>
-using namespace std;
+using namespace std;  
 int a[10];
 int main() {
 	int sum = 0;
