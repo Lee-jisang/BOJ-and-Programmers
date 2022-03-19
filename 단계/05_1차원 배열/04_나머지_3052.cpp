@@ -75,3 +75,29 @@ int main(int argc, const char * argv[]) {
  
  
 }
+
+
+
+#include <iostream>
+using namespace std;
+
+int main(){
+    int remain[42]={0,};
+    int a;
+    int cnt=0;
+    
+    for(int i=0; i<10; i++){
+        cin >> a;
+        if(remain[a%42]==0)
+            remain[a%42]++;           
+    }
+    
+    for(int i=0; i<42; i++){
+        if(remain[i]==1)
+            cnt++;
+    }
+    
+    cout << cnt;
+    
+    
+}
