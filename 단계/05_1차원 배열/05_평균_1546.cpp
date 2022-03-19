@@ -18,16 +18,42 @@ using namespace std;
 int main(){
     int T;
     cin >> T;
-    double a[T];
+    double a[T]; //T에 상수값 집어넣어야될수도 있음
     double sum=0.0;
     
     for(int i=0; i<T; i++)
         cin >> a[i];
     
-    sort(a, a+T);
+    sort(a, a+T); //오름 차순 정렬, 최대값 찾기 위해
     
     for(int i=0; i<T; i++)
          sum=sum+a[i]/a[T-1]*100;   
       
     cout << sum/T;      
+}
+
+//정렬 알고리즘 이용안하고 풀기
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int main(){
+    int T;
+    cin >> T;
+    double a[T];
+    double max=0.0;
+    double sum=0.0;
+    
+    for(int i=0; i<T; i++)
+        cin >> a[i];
+    
+    for(int i=0; i<T; i++){
+        if(a[i]>max)
+            max=a[i];  
+    }
+
+    for(int i=0; i<T; i++)
+         sum=sum+a[i]/max*100;   
+      
+    cout << sum/T;       
 }
