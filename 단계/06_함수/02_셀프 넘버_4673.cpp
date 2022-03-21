@@ -50,7 +50,7 @@ int main() {
     }
 }
 
-
+//배열 인덱스 이용..
 #include <iostream>
 using namespace std;
 
