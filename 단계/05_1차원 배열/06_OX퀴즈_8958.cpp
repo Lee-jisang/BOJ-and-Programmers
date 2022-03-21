@@ -30,7 +30,7 @@ int main() {
         cin >> str_arr[i];
 
         for (int j = 0; j < str_arr[i].length(); j++) {
-            if (str_arr[i][j] == 'O') { //대문자로 해야됨
+            if (str_arr[i][j] == 'O') { //대문자로 해야됨, ' ': 문자단위 하나, " ": 
                 cumulative++;
                 sum += cumulative;
             }
