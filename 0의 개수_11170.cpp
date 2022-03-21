@@ -25,7 +25,7 @@ int main(){
     string s;
    
     for(int i; i<T; i++){
-        int cnt=0;
+        int cnt=0; //여기다 넣어줘서 cnt 초기화 시켜줘야됨
         cin >> a >> b;
         for(int i=a; i<=b; i++){
             s=to_string(i);
