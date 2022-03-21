@@ -6,7 +6,7 @@
 */
 
 #include <iostream>
-#include <vector>
+#include <vector> 
 using namespace std;
 
 long long sum(vector<int> &a) { //배열함수 호출법
