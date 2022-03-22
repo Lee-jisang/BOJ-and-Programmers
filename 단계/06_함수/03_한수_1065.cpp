@@ -81,7 +81,7 @@ int main() {
 #include <iostream>
 using namespace std;
 bool hansoo(int a){
-    if(a < 100)
+    if(a < 100) 
         return true;
     int a1, a2, a3;
     a3 = a / 100;
