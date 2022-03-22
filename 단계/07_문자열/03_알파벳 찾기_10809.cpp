@@ -10,6 +10,7 @@
 만약, 어떤 알파벳이 단어에 포함되어 있지 않다면 -1을 출력한다. 단어의 첫 번째 글자는 0번째 위치이고, 두 번째 글자는 1번째 위치이다.
 */
 
+//이렇게 풀지말자...
 #include <iostream>
 #include <string>
 using namespace std;
@@ -209,4 +210,17 @@ int main() {
         cout << a[i] << " ";
     }
        
+}
+
+//find라는 좋은 함수가 있지 않느냐..
+#include <iostream>
+#include <string>
+using namespace std;
+int main() {
+    string s;
+    string alphabet = "abcdefghijklmnopqrstuvwxyz";
+    cin >> s;
+    for(int i = 0; i < alphabet.length(); i++)
+        cout << (int)s.find(alphabet[i]) << " ";
+    return 0;
 }
