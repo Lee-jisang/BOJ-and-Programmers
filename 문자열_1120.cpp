@@ -15,6 +15,7 @@ A의 뒤에 아무 알파벳이나 추가한다.
 A와 B의 길이가 같으면서, A와 B의 차이를 최소가 되도록 했을 때, 그 차이를 출력하시오.
 */
 
+//모든 경우에 대해서 이중 반복문을 통하여 검사
 #include <iostream>
 #include <string>
 using namespace std;
@@ -33,22 +34,18 @@ int main() {
 	for (int i = 0; i <M+1; i++) {
 		int cnt = 0;
 
-
-
 		for (int j = 0; j < A.length(); j++) {
 			if(A[j] != B[j + i])
 				cnt++;
 		}
 		result = min(result, cnt);
 	}
-
-
 	cout << result;
 
 
 }
 
-
+//모든경우를 대변할 수는 없음 그래서 이풀이는 틀림
 #include <iostream>
 #include <string>
 using namespace std;
