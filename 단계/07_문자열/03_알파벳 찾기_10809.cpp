@@ -221,6 +221,6 @@ int main() {
     string alphabet = "abcdefghijklmnopqrstuvwxyz";
     cin >> s;
     for(int i = 0; i < alphabet.length(); i++)
-        cout << (int)s.find(alphabet[i]) << " ";
+        cout << (int)s.find(alphabet[i]) << " "; //find는 앞에서 부터 
     return 0;
 }
