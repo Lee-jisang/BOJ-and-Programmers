@@ -1,20 +1,68 @@
-/*
-¹®Á¦:ÁØÇÏ´Â »çÀÌÆ®¿¡ È¸¿ø°¡ÀÔÀ» ÇÏ´Ù°¡ joonas¶ó´Â ¾ÆÀÌµð°¡ ÀÌ¹Ì Á¸ÀçÇÏ´Â °ÍÀ» º¸°í ³î¶ú´Ù. ÁØÇÏ´Â ³î¶÷À» ??!·Î Ç¥ÇöÇÑ´Ù. ÁØÇÏ°¡ °¡ÀÔÇÏ·Á°í ÇÏ´Â »çÀÌÆ®¿¡ ÀÌ¹Ì Á¸ÀçÇÏ´Â ¾ÆÀÌµð°¡ ÁÖ¾îÁ³À» ¶§, ³î¶÷À» Ç¥ÇöÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ½Ã¿À.
 
-ÀÔ·Â:Ã¹Â° ÁÙ¿¡ ÁØÇÏ°¡ °¡ÀÔÇÏ·Á°í ÇÏ´Â »çÀÌÆ®¿¡ ÀÌ¹Ì Á¸ÀçÇÏ´Â ¾ÆÀÌµð°¡ ÁÖ¾îÁø´Ù. ¾ÆÀÌµð´Â ¾ËÆÄºª ¼Ò¹®ÀÚ·Î¸¸ ÀÌ·ç¾îÁ® ÀÖÀ¸¸ç, ±æÀÌ´Â 50ÀÚ¸¦ ³ÑÁö ¾Ê´Â´Ù.
-
-Ãâ·Â:Ã¹Â° ÁÙ¿¡ ÁØÇÏÀÇ ³î¶÷À» Ãâ·ÂÇÑ´Ù. ³î¶÷Àº ¾ÆÀÌµð µÚ¿¡ ??!¸¦ ºÙ¿©¼­ ³ªÅ¸³½´Ù.
-*/
-
-//°Á ¹®ÀÚ¿­ ÀÔ·Â ¹Þ°í, µÚ¿¡ ??! ºÙÀÌ´Â ¹®Á¦
+//í•¨ìˆ˜í™”x-ì‹œê°„ì´ˆê³¼
 #include <iostream>
-#include <string> //¹®ÀÚ¿­ ÀÔ·Â Çì´õÆÄÀÏ
 using namespace std;
 
 int main() {
-	string s1;
-	cin >> s1;
-	cout << s1 << "??!" << endl;
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
 
-	return 0;
+    int N;
+    cin >> N; // 0<N<=1000
+
+    int cnt = 99;
+
+    if (N < 100) {
+        cout << N << "\n";
+    }
+    else {
+        while (1) {
+            if ((N / 100) - (N / 10 % 10) == (N / 10 % 10) - (N % 10)) {
+                cnt++;
+            }                
+            N--;
+            if (N == 100) break;
+        }
+    }
+    cout << cnt << "\n";
+    return 0;
+
+}
+
+
+//í•¨ìˆ˜í™”-ì—­ì‹œ ë¬´í•œë£¨í”„ë¥¼ ì¨ì„œ ì‹œê°„ì´ˆê³¼ë¡œ ë‚˜ì˜´
+#include <iostream>
+using namespace std;
+
+int han(int a) {
+    int cnt = 99;
+
+    if (a < 100) {
+        return a;
+    }
+    else {
+        while (1) {
+            if ((a / 100) - (a / 10 % 10) == (a / 10 % 10) - (a % 10)) {
+                cnt++;
+            }
+            a--;
+            if (a == 100) break;
+        }
+    }
+    return cnt;
+}
+
+int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+
+    int N;
+    cin >> N; // 0<N<=1000
+
+
+    cout << han(N);
+    return 0;
+
 }
