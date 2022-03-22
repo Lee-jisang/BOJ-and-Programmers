@@ -13,7 +13,7 @@ QR Code "alphanumeric" 문자는 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ\$%*+-./: �
 #include <iostream>
 #include <string>
 using namespace std;
-
+ 
 int main() {
 
     int T; //테스트 케이스 수
