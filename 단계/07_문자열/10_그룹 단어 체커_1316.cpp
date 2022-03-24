@@ -10,7 +10,7 @@
 첫째 줄에 그룹 단어의 개수를 출력한다.
 */   
 
-//이건 좀 잘푼듯
+//이건 좀 잘푼듯 
 #include <iostream>
 #include <string>
 using namespace std;
