@@ -14,14 +14,9 @@
 */
 
 #include<iostream>
-#include<string>
 using namespace std;
 
-//string 클래스는 문자의 끝에 null문자(‘\0’) 등이 포함되지 않는다.
-
 int main() {
-	 //걷는 거리가 같을때는 낮은 층수
-	 //걷는 거리가 다를때는 적은 층수
 	int a[15][14] = { 0, };
 	int sum[15] = { 0, };
 
