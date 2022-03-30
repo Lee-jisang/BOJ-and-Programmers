@@ -29,3 +29,41 @@ int main() {
 		}					
 	}
 }
+
+
+/*
+int a[4998] = { 0, };
+int a3[1666] = { 0, };
+int j = 0;
+
+int a5[1000] = { 0, };
+int k = 0;
+
+int sum35[16];
+
+for (int i = 3; i <= 5000; i++) {
+	a[i-3] = i;
+	if (i % 3 == 0)
+		a3[j++] = i;
+	if (i % 5 == 0)
+		a5[k++] = i;
+}
+
+for (int i = 0; i < 1666; i++)
+	cout << a3[i] << " ";
+
+cout << "\n";
+
+for (int i = 0; i < 1000; i++)
+	cout << a5[i] << " ";
+
+
+for (int i = 0; i < 1666; i++) {
+	for (int j = 0; j < 1000; j++) {
+
+		a3[i]+a5[j]
+	}
+
+
+}
+*/
