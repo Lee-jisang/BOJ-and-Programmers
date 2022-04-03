@@ -36,7 +36,7 @@ int main() {
 }
 
 
-//시간 초과 풀이
+//시간 초과 풀이 
 #include <iostream>
 #include <string>
 using namespace std;
