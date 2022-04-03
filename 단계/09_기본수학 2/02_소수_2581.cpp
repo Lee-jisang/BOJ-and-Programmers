@@ -16,7 +16,7 @@ M이상 N이하의 자연수 중 소수인 것을 모두 찾아 첫째 줄에 �
 */
 
 #include <iostream>
-using namespace std;
+using namespace std; 
 
 int main() {
     int M, N;
