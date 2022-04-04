@@ -1,3 +1,4 @@
+//세 점이 주어졌을 때 특징은 x 좌표, y 좌표마다 2개는 같고 나머지 하나가 남는다는 것입니다.
 #include <iostream>
 using namespace std;
 
