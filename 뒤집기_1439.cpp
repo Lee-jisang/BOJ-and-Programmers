@@ -64,3 +64,68 @@ int main() {
 
 
 }
+
+
+//0과 1로만 이루어진 숫자 ex)00011100
+//최소로 뒤집어서 같은 숫자를 만들어야 됨
+//연속된 하나 이상의 숫자를 잡고 모두 뒤집는 것이 포인트
+
+#include<iostream>
+#include<string>
+using namespace std;
+
+//string 클래스는 문자의 끝에 null문자(‘\0’) 등이 포함되지 않는다.
+
+int main() {
+/*
+	string s;
+	cin >> s;//0과 1로만 이루어진 문자열을 입력받음
+
+	int cnt = 0;
+
+	//cout << s[6]; //끝글자에 NULL이 포함?
+
+	for (int i = 0; i < s.length(); i++) {
+		if (s[i] != s[i + 1]) { //연속된 숫자가 다르면 카운트		
+			cnt++;
+			if (i + 1 == s.length()) {
+				break;
+			}
+			//cnt++;
+
+		}
+
+	}
+	//cout << cnt << "\n"; // ex)0001100 -> 2가 아닌 3이 나옴 이유는?
+	cout << cnt / 2 << "\n"; //cnt는 int형이므로 2로나눠도 답은 같음
+*/	
+
+
+
+//이건왜 틀리지?
+
+	string s;
+	cin >> s;
+
+	int cnt = 0;
+
+	//cout << s[6]; 끝글자에 공백이 포함?
+
+	for (int i = 0; i < s.length(); i++) {
+		if (s[i] != s[i + 1]) { //연속된 숫자가 다르면 카운트		
+			//cnt++;
+			if (i + 1 == s.length()) {
+				break;
+			}
+			cnt++;  //00000001 일때 끝에 비교를 안해서 1로 나옴
+
+		}
+
+	}
+	if (cnt == 1)
+		cout << cnt << "\n"; //0000001 인경우 원래는 
+	else
+		cout << cnt / 2;
+
+
+}
