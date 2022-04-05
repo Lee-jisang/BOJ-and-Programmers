@@ -17,7 +17,7 @@ using namespace std;
 
 int main() {
     string A,B;
-
+ 
     cin >> A >> B; // (1 <= A,B <= 1,000,000)
 
  
