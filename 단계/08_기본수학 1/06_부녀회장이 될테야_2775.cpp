@@ -11,7 +11,7 @@
 
 출력
 각각의 Test case에 대해서 해당 집에 거주민 수를 출력하라.
-*/
+*/ 
 
 #include<iostream>
 using namespace std;
