@@ -51,7 +51,7 @@ int main() {
 			else
 				cout << N % H << 0 << N / H + 1;
 		}
-				
+				 
 		cout << "\n";
 	//}
 
