@@ -44,3 +44,74 @@ int main() {
 
     }
 }
+
+
+
+//에라토스테네스의 체
+/*
+#include<stdio.h>
+#include<math.h>
+
+int main(void)
+
+{
+	int num;
+	int cnt = 0;
+	int arr[10000];
+	scanf("%d", &num);
+
+	for (int i = 2; i <= num; i++)
+	{
+		arr[i] = i;
+	}
+
+	for (int i = 2; i < sqrt(num); i++)
+	{
+		if (arr[i] == 0) continue;
+		for (int j = 2 * i; j <= num; j += i)
+		{
+			arr[j] = 0;
+		}
+	}
+
+	for (int i = 2; i <= num; i++)
+	{
+		if (arr[i] != 0) printf("%d ", arr[i]);
+	}
+
+
+}
+*/
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+	int n, rt, cnt = 0;
+
+	while (1) {
+		cin >> n;
+		if (!n)	//0 입력시 종료
+			break;
+
+		for (int i = n + 1; i <= 2 * n; i++) {
+			rt = sqrt(i);
+			if (rt == 1 && i != 1) {	//2,3인 경우
+				cnt++;
+				continue;
+			}
+			if (i % 2) {	//홀수일 경우
+				for (int j = 2; j <= rt; j++) {
+					if (!(i%j))
+						break;
+					if (j == rt) {
+						cnt++;
+					}
+				}
+			}
+		}
+		cout << cnt << '\n';
+		cnt = 0;
+	}
+}
