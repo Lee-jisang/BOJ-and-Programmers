@@ -9,7 +9,7 @@ M이상 N이하의 소수를 모두 출력하는 프로그램을 작성하시오
 한 줄에 하나씩, 증가하는 순서대로 소수를 출력한다.
 */
 
-#include <iostream>
+#include <iostream> 
 #include <cmath>
 using namespace std;
 
