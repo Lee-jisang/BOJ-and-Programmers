@@ -1,22 +1,58 @@
-/*
-문제
-자연수 N이 주어졌을 때, N부터 1까지 한 줄에 하나씩 출력하는 프로그램을 작성하시오.
-
-입력
-첫째 줄에 100,000보다 작거나 같은 자연수 N이 주어진다.
-
-출력
-첫째 줄부터 N번째 줄 까지 차례대로 출력한다.
-*/
- 
-
 #include <iostream>
+#include <cmath>
 using namespace std;
 
-int main(){
-    int N;
-    cin >> N;
+int main() {
+
+    int prime[1229] = { 0, };
+    int p = 0;
+    int cnt;
+
+    for (int i = 2; i <= 10000; i++) {
+        cnt = 0;
+        for (int j = 2; j <= i; j++) {
+            if (i % j == 0)
+                cnt++;
+        }
+        if (cnt == 1) {
+            prime[p++] = i;
+
+        }
+            
+    }
     
-    for(int i=N; i>0; i--)
-        cout << i << '\n';   
+	int T;
+	cin >> T;
+    int dprime;
+    int count = 0;
+	
+	int n; // 2보다 큰 짝수, 4 ≤ n ≤ 10,000, 2개의 소수의 합!
+	for (int i = 0; i < T; i++) {
+		cin >> n;
+        for (int j = n/2; j >=2; j--) {
+            if (n > prime[j]) {
+                //cout << prime[j] << " ";
+                dprime = n - prime[j];
+                cnt = 0;
+                for (int k = 2; k <= dprime; k++) {
+                    if ((dprime % k) == 0)
+                        cnt++;
+                }
+                if (cnt == 1) {    
+                    count++;            
+                    cout << prime[j] << " ";
+                    cout << dprime << " ";
+                    cout << "\n";
+                     
+                }         
+                //cout << n - prime[j] << " ";
+                
+            }                          
+        } 
+
+
+	}
+
+
+    //cout << count;
 }
