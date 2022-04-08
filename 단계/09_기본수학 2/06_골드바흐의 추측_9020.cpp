@@ -176,3 +176,40 @@ int main() {
    
 
 }
+
+
+
+==================================
+	
+	
+#include <iostream>
+#include <cmath>
+#include <vector>
+using namespace std;
+
+bool sosu(int num) {
+    if (num < 2) return false;
+    int a = (int)sqrt(num);
+    for (int i = 2; i <= a; i++) if (num % i == 0) return false;
+    return true;
+}
+
+int main() { 
+    int T;
+    cin >> T;
+    int n;
+   
+    for (int k = 0; k < T; k++) {
+        cin >> n;
+        for (int i = n/2; i >= 0; i--) {
+            if (sosu(i)) {
+                if (sosu(n - i)) {
+                    cout << i << " " << n - i << "\n";
+                    break;
+                }               
+            }
+        }
+
+    }
+  
+}
