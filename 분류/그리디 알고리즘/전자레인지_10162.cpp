@@ -9,7 +9,7 @@ int main() {
 
 
     int A = 300;
-    int B = 60;
+    int B = 60; 
     int C = 10;
 
     if ((T % 10) != 0) {
