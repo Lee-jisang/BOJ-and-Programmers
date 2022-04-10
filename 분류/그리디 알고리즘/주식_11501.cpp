@@ -56,3 +56,67 @@ int main() {
 
 
 }
+
+
+//뒤에서 부터 큰값 기준
+#include <iostream>
+#include <vector>
+#include <cmath>;
+#include <algorithm>
+
+using namespace std;
+
+//매일 그는 아래 세 가지 중 한 행동을 한다.
+//주식 하나를 산다.
+//원하는 만큼 가지고 있는 주식을 판다.
+//아무것도 안한다.
+
+
+int main() {
+	int T; 
+	cin >> T;
+	int N; 
+	
+	for (int i = 0; i < T; i++) {	
+		cin >> N; //날의 수
+		vector<int> n;		
+
+		for (int k = 0; k < N; k++) {
+			int x;
+			cin >> x;
+			n.push_back(x);
+		}	
+
+		
+		long long sum = 0;		
+		int mv = -1;
+
+		for (int i = N-1; i >= 0; i--) {//뒤에서 부터
+			mv = max(mv, n[i]); //큰값을 기준으로
+			sum = sum+ (mv-n[i]); //주식가격을 빼면 최대이익
+			/*
+			ex) N = 5
+				1 1 3 1 2
+				i=4
+				mv=2
+				2-2=0
+				i=3
+				mv=2
+				2-1=1
+				i=2
+				mv=3
+				3-3=0
+				i=1
+				mv=3
+				3-1=2
+				i=0
+				mv=3
+				3-1=2
+
+				sum=5
+
+			*/
+		}
+		cout << sum << "\n";	
+	}
+}
