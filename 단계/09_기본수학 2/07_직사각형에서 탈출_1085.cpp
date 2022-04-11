@@ -18,5 +18,5 @@ int main() {
     int x, y, w, h;
 
     cin >> x >> y >> w >> h;
-    cout << min({ x - 0,y - 0,w - x,h - y });
+    cout << min({ x - 0,y - 0,w - x,h - y }); // 직사각형 속 십자가 모양 + 중앙에서 부터 제일 
 }
