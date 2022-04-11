@@ -44,7 +44,7 @@ int main() {
 				cout << 0 << "\n";
 		}
 		else {
-			if (r1 + r2 == dis || abs(r1-r2)==dis) //r1-r2==dis
+			if (r1 + r2 == dis || abs(r1-r2)==dis) //r1-r2==dis, r1-r2에는 abs 해줘야됨
 				cout << 1 << "\n";
 			else if (r1 + r2 > dis && abs(r1 - r2) < dis) //&& r1-r2 < dis
 				cout << 2 << "\n";
