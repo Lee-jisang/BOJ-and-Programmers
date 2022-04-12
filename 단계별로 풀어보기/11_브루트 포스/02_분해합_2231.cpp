@@ -6,11 +6,8 @@ using namespace std;
 
 
 int main() {
-
-
 	int n;
 	cin >> n; //N(1 ≤ N ≤ 1,000,000)
-
 
 	int cnt = 0;
 	for (int i = 1; i <= n; i++) {
@@ -19,7 +16,6 @@ int main() {
 			cout << i << "\n";	
 			break;
 		}
-
 	}
 	if (cnt == 0)
 		cout << 0 << "\n";
