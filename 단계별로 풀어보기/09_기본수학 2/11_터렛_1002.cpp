@@ -25,7 +25,7 @@ using namespace std;
 
 int main() {
 
-	int T;
+	int T; 
 	cin >> T;
 
 	int x1, y1, r1;
