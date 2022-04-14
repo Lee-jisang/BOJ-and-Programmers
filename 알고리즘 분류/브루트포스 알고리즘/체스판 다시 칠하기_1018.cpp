@@ -1,5 +1,3 @@
-
-
 //비교만 하면되는데... , 경우의수 다출력!
 #include <iostream>
 #include <vector>
@@ -7,12 +5,7 @@
 #include <algorithm>
 using namespace std;
 
-
-int main() {
-
-	
-
-
+int main() {	
 	char a[8][8] = {
 		{'W','B','W','B','W','B','W','B'},
 		{'B','W','B','W','B','W','B','W'},
@@ -90,10 +83,6 @@ using namespace std;
 
 
 int main() {
-
-
-
-
 	char a[8][8] = {
 		{'W','B','W','B','W','B','W','B'},
 		{'B','W','B','W','B','W','B','W'},
