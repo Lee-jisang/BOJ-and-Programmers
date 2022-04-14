@@ -78,7 +78,7 @@ int main() {
 #include <iostream>
 #include <vector>
 #include <cmath>;
-#include <algorithm>
+#include <algorithm> 
 using namespace std;
 
 
