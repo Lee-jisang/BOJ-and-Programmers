@@ -1,3 +1,56 @@
+//내 풀이
+#include <iostream>
+#include <vector>
+#include <string>
+#include <cmath>
+using namespace std;
+
+int main() {
+    string s;
+    cin >> s;
+
+    int cnt = 0;
+    vector<double> v;
+    for (int i = s.length() - 1; i >= 0; i--) {
+        cnt++;
+
+        if (s[i] == '+' || s[i] == '-') {//+.-이면
+            cnt = 0;
+        }
+        if (s[i] == '+') {
+            s[i] = '0';
+        }   
+        v.push_back((s[i] - '0') * pow(10, cnt - 1));
+    }
+
+    int sum = 0;
+    bool isminus = false;
+   
+    for (int i = v.size() - 1; i >= 0; i--) {
+        if (v[i] < 0) {
+            v[i] = 0;
+            isminus = true;
+        }
+
+        if (isminus) {
+            sum = sum - v[i];
+        }
+        else {
+            sum = sum + v[i];
+        }      
+     
+    }
+
+    cout << sum;
+
+
+
+
+}
+
+
+
+
 #include <iostream>
 #include <vector>
 #include <string>
