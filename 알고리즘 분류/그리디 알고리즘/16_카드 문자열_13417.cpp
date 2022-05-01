@@ -16,10 +16,7 @@ N장의 카드에 적혀있는 알파벳의 처음 순서가 주어질 때, 태�
 
 #include <iostream>
 #include <vector>
-#include <algorithm>
 #include <string>
-#include <cmath>
-#include <map>
 using namespace std;
 
 int main() {
