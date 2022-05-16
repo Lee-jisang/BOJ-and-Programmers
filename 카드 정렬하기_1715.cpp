@@ -1,3 +1,4 @@
+//틀린 풀이: 순차적으로 하면 안됨
 #include <iostream>
 #include <vector>
 #include <string>
@@ -42,4 +43,29 @@ int main() {
 		cout << sum2;
 	}
 
+}
+
+//우선순위큐 , 최소 힙을 이용한 풀이
+#include <iostream>
+#include <queue>
+using namespace std;
+
+int main() {
+	int num, val;
+	long long result = 0;
+	cin >> num;
+	priority_queue<int, vector<int>, greater<int>> pq;
+	for (int i = 0; i < num; i++) {
+		cin >> val;
+		pq.push(val);
+	}
+	while (pq.size() > 1) {
+		int a = pq.top();
+		pq.pop();
+		a += pq.top();
+		pq.pop();
+		result += a;
+		pq.push(a);
+	}
+	cout << result;
 }
