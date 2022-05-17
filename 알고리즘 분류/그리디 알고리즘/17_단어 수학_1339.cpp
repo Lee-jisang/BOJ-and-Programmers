@@ -83,3 +83,15 @@ int main() {
 
 	cout << sum;
 }
+
+
+반례:ABB
+     BB
+     BB
+     BB
+     BB
+     BB
+     BB
+     BB
+     BB
+     BB
