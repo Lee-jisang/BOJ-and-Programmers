@@ -1,0 +1,14 @@
+SELECT ANIMAL_ID, NAME, 
+CASE
+ WHEN SEX_UPON_INTAKE LIKE '%Neutered%' OR SEX_UPON_INTAKE LIKE '%Spayed%'
+ THEN 'O'
+ ELSE 'X' 
+ END as '중성화'
+FROM ANIMAL_INS
+ORDER BY ANIMAL_ID
+
+-- CASE 구문은 삼항연산자와 비슷합니다.
+-- WHEN 절에 조건을 넣고
+-- THEN 절에는 참일 경우 출력 내용
+-- ELSE 절에는 거짓일 경우 출력 내용을 입력하시면 됩니다.
+-- 마지막에는 END로 닫아주시면 됩니다.
