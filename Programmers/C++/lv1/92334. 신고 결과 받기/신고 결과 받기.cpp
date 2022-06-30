@@ -25,7 +25,7 @@ vector<int> solution(vector<string> id_list, vector<string> report, int k) {
         if (it == reportHash.end()) continue;
         
         for(string bad: it->second) {
-            if (resultHash[bad].size() >= k){
+            if (resultHash[bad].size() >= k){ // cout << i << " " << bad << "\n";
                 answer[i]++;
             }
         }
