@@ -10,8 +10,8 @@ vector<int> solution(vector<string> id_list, vector<string> report, int k) {
     unordered_map<string, unordered_set<string>> resultHash;
     
     for(string r : report) {
-        int pos = r.find(' ');
-        string user = r.substr(0,pos);
+        int pos = r.find(' '); //공백기준으로 
+        string user = r.substr(0,pos); 
         string bad = r.substr(pos+1);
         reportHash[user].insert(bad);
         resultHash[bad].insert(user);
@@ -25,7 +25,7 @@ vector<int> solution(vector<string> id_list, vector<string> report, int k) {
         if (it == reportHash.end()) continue;
         
         for(string bad: it->second) {
-            if (resultHash[bad].size() >= k){ // cout << i << " " << bad << "\n";
+            if (resultHash[bad].size() >= k){ // cout << i << " " << bad << "\n"; 
                 answer[i]++;
             }
         }
