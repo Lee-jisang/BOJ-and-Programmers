@@ -9,42 +9,45 @@
 // 3개입는경우: 3C1*2C1*1C1->6
 
 #include <iostream>
-#include <vector>
+#include <map>
+#include <set>
 #include <algorithm>
-#include <string>
 using namespace std;
 
 int main() {
-	int N;
-	cin >> N;
+	ios::sync_with_stdio(false);
+	cin.tie(NULL);
 
-
-	vector<int> v(N);//복사벡터
-	vector<int> v2(N);//원본벡터
-	int a;
-	for (int i = 0; i < N; i++) {
-		cin >> a;
-		v[i] = a;
-		v2[i] = a;
-
-	}
-	sort(v.begin(), v.end());
-	v.erase(unique(v.begin(), v.end()), v.end());//중복제거
-
-	for (int i = 0; i < v2.size(); i++) {
-		/* 시간초과
-		for (int j = 0; j < v.size(); j++) {
-			if (v2[i] == v[j]) {
-				cout << j << " ";
-				break;
-			}	
+	int T;
+	cin >> T;	
+	
+	for(int i=0; i<T; i++){
+		int n;
+		map<string, set<string>> m;
+		int cnt=0;
+		cin >> n;
+		for(int j=0; j<n; j++){
+			string clothe;
+			string keyclothe;
+			cin >> clothe >> keyclothe;
+			m[keyclothe].insert(clothe);
+			cnt++; //1가지 옷입는 경우 
+			
 		}
-		*/
-		//시간초과 해결
-		// i번째 요소값의 위치 it
-		auto it = lower_bound(v.begin(), v.end(), v2[i]);
-		// it에서 v벡터의 시작 주소값을 빼준 값이 답
-		cout << it - v.begin() << ' ';
-
+		int mul =1;
+		for (auto iter = m.begin(); iter != m.end(); ++iter) {
+			mul *= m[iter->first].size();
+		}
+		
+		if(m.size()==1){
+			cout << cnt << "\n";
+		}
+		else{
+			cout << mul+cnt << "\n";
+		}
+		
+				
 	}
+
+
 }
