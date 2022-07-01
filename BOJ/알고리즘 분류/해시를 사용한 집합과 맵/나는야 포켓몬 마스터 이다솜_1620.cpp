@@ -60,12 +60,10 @@ int main(){
 	}	
 	string Q;
 	for(int i=1; i<= M; i++){
-		while(cin >> Q){
-			if(isdigit(Q[0])==true){
-				cout << m2[stoi(Q)] << "\n";
-			}else{
-				cout << m[Q] << "\n";
-			}			
-		}		
+		cin >> Q;	
+		if(isdigit(Q[0])==true)
+			cout << m2[stoi(Q)] << "\n";
+		else
+			cout << m[Q] << "\n";				
 	}
 }
