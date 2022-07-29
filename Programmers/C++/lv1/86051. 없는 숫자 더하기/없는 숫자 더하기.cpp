@@ -20,3 +20,35 @@ int solution(vector<int> numbers) {
 
     return answer;
 }
+
+
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+#include <string>
+#include <vector>
+
+using namespace std;
+
+int solution(vector<int> numbers) {
+
+    int answer = 45;
+
+    for (int i = 0 ; i < numbers.size() ; i++)
+        answer -= numbers[i];
+
+    return answer;
+}
