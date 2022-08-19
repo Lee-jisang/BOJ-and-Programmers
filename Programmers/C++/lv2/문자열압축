@@ -1,0 +1,64 @@
+#include <string>
+#include <vector>
+#include <iostream>
+using namespace std;
+
+int solution(string s) {
+    if(s.length()==1){
+        return 1;
+    }
+    int k=0;
+    int min=1001;
+    for(int i=s.length()/2; i>=1; i--){   
+        //cout << i << " ";
+        vector<string> v;
+        for(int j=0; j<=s.length()-1; j=j+i){  
+            v.push_back(s.substr(j,i));
+        }     
+        
+        // for(int j=0; j<v.size(); j++){          
+        //     cout << v[j] << " ";   
+        // }
+        // cout << "\n";    
+      
+        
+        for(int j=0; j<v.size()-1; j++){  
+            for(int k=j+1; k<v.size(); k++){
+                if(v[j]==v[k]) v[k]="*";
+                else break;  
+            } 
+        }
+     
+        // cout << i << " ";
+        // for(int j=0; j<v.size(); j++){  
+        //     cout << v[j] << " ";   
+        // }
+        // cout << "\n";
+              
+        int answer=0;
+        for(int j=0; j<v.size()-1; j++){     
+            int sum=0;
+            for(int k=j+1; k<v.size(); k++){
+                if(v[j]!=v[k] && v[k]=="*"){
+                    //cout<< "+1할거:" << v[j] <<"\n";
+                    //cout << v[j].length()+1 <<"\n";
+                    sum += v[j].length()+1;         
+                    break;
+                }else{
+                    if(v[j]=="*") continue;
+                    //cout<< "그냥더할거:" << v[j] <<"\n";
+                    //cout << v[j].length() <<"\n";
+                    sum += v[j].length();
+                    break;
+                }
+            }    
+            answer += sum;        
+        }
+        if(v[v.size()-1]!="*") answer += v[v.size()-1].length();
+        
+        if(min>answer)
+            min=answer;
+        //cout << "result:" << min << "\n";     
+    }
+    return min;
+}
